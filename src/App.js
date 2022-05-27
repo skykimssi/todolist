@@ -9,8 +9,7 @@ function App() {
       <div>네비메뉴 만들면 얘는 고정인가 </div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="*" element={<Home />} />
+          <Route exact path="/" element={<Home/>}/>
           <Route path="/memo" element={<Memo />} />
         </Routes>
       </BrowserRouter>
