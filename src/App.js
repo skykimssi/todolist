@@ -1,49 +1,19 @@
-import { useEffect, useState } from 'react';
+import * as React from 'react';
 import './App.css';
-
-
-
-
-
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Home from './router/home';
+import Memo from './router/memo';
 function App() {
-  
-
-  const [todo, settodo] = useState("");
-  const [todos, setTodos] = useState([]);
-  const onChange = (event) => {
-    settodo(event.target.value);
-  }
-  const onSubmit = (event) => {
-    event.preventDefault();
-    if(todo ===""){
-      return;
-    }
-    setTodos((currentArray) => [todo, ...currentArray]);
-    settodo("");
-  }
-
-  useEffect(() => {console.log("==AppStart==")},[]);
-  useEffect(() => {console.log(todos)}, [todos]);
-   
   return (
-    <div>
-      <h1>일정 [{todos.length}]</h1>
-      <form onSubmit={onSubmit}>
-        <input 
-          type="text" 
-          value={todo} 
-          onChange={onChange} 
-          placeholder="Write here to do..."
-        />
-        <button>add Todo List</button>
-      </form>
-      <hr/>
-      <ul>
-        {todos.map((item, index) => (
-          <li key={index}>{item}</li>
-          ))}
-      </ul>
-      
+    <div className='App'>
+      <div>네비메뉴 만들면 얘는 고정인가 </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="*" element={<Home />} />
+          <Route path="/memo" element={<Memo />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
