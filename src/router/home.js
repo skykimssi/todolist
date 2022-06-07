@@ -8,6 +8,7 @@ function Home() {
             <div>소개 3</div>
             <div>소개 4</div>
         </div>
+        
     );
 }
 export default Home;

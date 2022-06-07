@@ -3,11 +3,14 @@ import './App.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Home from './router/home';
 import Memo from './router/memo';
+import Navigtion from './component/Navigation';
+
+
 function App() {
   return (
     <div className='App'>
-      <div>네비메뉴 만들면 얘는 고정인가 </div>
       <BrowserRouter>
+      <Navigtion></Navigtion>
         <Routes>
           <Route exact path="/" element={<Home/>}/>
           <Route path="/memo" element={<Memo />} />

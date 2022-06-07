@@ -1,0 +1,29 @@
+.top_nav_area {
+    width: 100%;
+
+}
+
+.top_nav_header {
+    padding : 0 40px;
+    background-color: #5865f2;
+}
+
+.top_nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 60px;
+}
+
+.top_menu_area {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.top_menu_area span {
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+}
