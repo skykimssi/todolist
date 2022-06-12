@@ -1,0 +1,36 @@
+.memoBlockBox {
+    width: 100%;
+    height: 100%;
+    
+}
+
+.memoBlockHeader {
+    width: 100%;
+    height: 20px;
+    background-color: rgb(255, 230, 0);
+}
+
+.memoBlockHeader button{
+    float: right;
+}
+
+.memoBlockBody {
+    width: 100%;
+    height: calc(100% - 20px);
+    background-color: yellow;
+    
+}
+
+.memoBlockBody textarea {
+    border: none;
+    resize: none;
+    margin: 0;
+    padding: 5px;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    background-color: transparent;
+}
+
+.memoBlockBody textarea:focus {
+    outline: none;
+}

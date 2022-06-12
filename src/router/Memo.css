@@ -1,0 +1,10 @@
+.memo {
+    padding : 20px;
+    height: calc(100vh - 120px);
+
+}
+
+.box{
+    resize: both;
+    overflow: auto;
+}

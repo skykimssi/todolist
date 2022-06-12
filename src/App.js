@@ -1,8 +1,8 @@
 import * as React from 'react';
 import './App.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import Home from './router/home';
-import Memo from './router/memo';
+import Home from './router/Home';
+import Memo from './router/Memo';
 import Navigtion from './component/Navigation';
 
 

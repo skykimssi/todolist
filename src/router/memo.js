@@ -1,37 +1,77 @@
 import { useState, useEffect } from "react";
+import MemoBlock from "../component/memo/MemoBlock";
 import MemoIntro from '../component/memo/MemoIntro';
-
-
+import Draggable from "react-draggable";
+import "./Memo.css"
 
 function Memo() {
-    const [memoCnt, setMemoCnt] = useState(0);
+    
     const [memoData, setMemoData] = useState(null);
 
+    //여기서 초기 데이터 세팅
     useEffect(()=>{
-        console.log("첫실행~")
+        setMemoData((preData) => preData = JSON.parse(localStorage.getItem("memoData")));
+        
     },[])
 
+    const dragBox = (data) => {
+        console.log(data);
+    }
+
+//<MemoBlock memoData={memoData}/>
+//memoData? null 
     return (
-        <div className="Memo">
-            {memoCnt === 0?<MemoIntro onClick={addMemoBtn} />:""}
-            
-            
-                
-            
+        <div className="memo">
+            {
+                memoData 
+                ? memoData.map(
+                    (memoDataRow, index) =>
+                    
+                    <Draggable 
+                        key={index}
+                        handle=".memoBlockHeader"
+                        bounds="parent"
+                    >
+                        <div 
+                            className="box"
+                            style={{
+                                width : memoDataRow.memoWidth,
+                                height : memoDataRow.memoHeight,
+                            }}
+                        >
+                            <MemoBlock memoData={memoDataRow} />
+                        </div>
+                    </Draggable>
+                    
+                )
+                : <MemoIntro onClick={addMemoBtn} /> 
+            }
             
         </div>
     )
-
     
+    
+
     function addMemoBtn() {
         //신규 메모 정보 세팅
         //추가될 메모 정보 추가
-        const memoIdx = 0;
-        localStorage.getItem("memoData");
-        localStorage.setItem("memoData",memoData);
-        
-        setMemoCnt((precnt)=>precnt+1);
-        
+        let memoDataArray = [];
+        const addMemoData = {
+            "memoIdx": 0,
+            "memoWidth": "300px",
+            "memoHeight": "300px",
+            "memoPositionTop": "50%",
+            "memoPositionLeft": "50%",
+            "transform": "translate(-50%,-50%)"
+        }
+        //console.log(memoData);
+        if(memoData !== null ){
+            memoDataArray.push(localStorage.getItem("memoData"));
+        }
+        memoDataArray.push(addMemoData);
+        setMemoData((preData) => preData = memoDataArray);
+        localStorage.setItem("memoData", JSON.stringify(memoDataArray));
+        //console.log(JSON.parse(localStorage.getItem("memoData")));
     }
 
 }
