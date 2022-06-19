@@ -1,11 +1,11 @@
 .top_nav_area {
     width: 100%;
-    
+    position: absolute;
 }
 
 .top_nav_header {
     padding : 0 40px;
-    background-color: #5865f2;
+    
     
 }
 
@@ -32,7 +32,7 @@
 
 .top_menu_area span:hover {
     
-    color: rgb(122, 206, 127);
+    text-decoration: underline;
 }
 
 .logoImage {

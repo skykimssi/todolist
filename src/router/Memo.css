@@ -1,7 +1,7 @@
 .memo {
-    padding : 20px;
-    height: calc(100vh - 120px);
-
+    padding : 100px 20px 20px 20px;
+    height: 100vh;
+    background-color: #23272a;
 }
 
 .box{
