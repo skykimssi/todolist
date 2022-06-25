@@ -13,7 +13,7 @@ function Home() {
             </div>
             <div className="mainArea2">
                 <div className="item">
-                    여기에 이미지
+                    <img className="img" src="img/main_area2.png"/>
                 </div>
                 <div className="item">
                     여기에는 대충 내 소개 들어감 이름 등등등

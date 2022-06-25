@@ -42,10 +42,13 @@ function Memo() {
                             <MemoBlock memoData={memoDataRow} />
                         </div>
                     </Draggable>
-                    
                 )
+                
                 : <MemoIntro onClick={addMemoBtn} /> 
             }
+            <div className="memoOverlay">
+                <div onClick={addMemoBtn}>dasdsadsadsads</div>
+            </div>
             
         </div>
     )
@@ -66,7 +69,9 @@ function Memo() {
         }
         //console.log(memoData);
         if(memoData !== null ){
-            memoDataArray.push(localStorage.getItem("memoData"));
+            console.log(memoData)
+            memoDataArray.push(...memoData);
+            //memoDataArray.push(localStorage.getItem("memoData"));
         }
         memoDataArray.push(addMemoData);
         setMemoData((preData) => preData = memoDataArray);

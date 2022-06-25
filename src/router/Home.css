@@ -16,6 +16,12 @@
     padding: 20px;
 }
 
+.mainArea2 .item .img {
+    width: 100%;
+    height: auto;
+    
+}
+
 .mainTopImg {
     width: 100%;
     height: 600px;

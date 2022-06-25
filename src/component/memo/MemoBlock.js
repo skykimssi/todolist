@@ -13,11 +13,11 @@ function MemoBlock(props) {
     return (
         <div className="memoBlockBox" >
             <div className="memoBlockHeader">
-                
-                <button>닫기</button>
+                <input maxLength={50}  />
+                <div className='close close1'></div>
             </div>
             <div className="memoBlockBody">
-                <textarea></textarea>
+                <textarea />
             </div>
 
         </div>

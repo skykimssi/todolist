@@ -10,9 +10,21 @@
     background-color: rgb(255, 230, 0);
 }
 
-.memoBlockHeader button{
-    float: right;
+.memoBlockHeader .close {
+    position:absolute;
+    right: 0px;
+    top: 0px;
+    width:20px;
+    height:20px;
+    text-align:center;
+    margin-right:5px;
+
+
+    
 }
+
+
+.close1:after {content: "\00d7"; font-size:20pt;line-height:15px;}
 
 .memoBlockBody {
     width: 100%;
@@ -32,5 +44,16 @@
 }
 
 .memoBlockBody textarea:focus {
+    outline: none;
+}
+
+.memoBlockHeader input {
+    width: 80%;
+    float: left;
+    background-color: transparent;
+    border: none;
+}
+
+.memoBlockHeader input:focus {
     outline: none;
 }

@@ -4,7 +4,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Home from './router/Home';
 import Memo from './router/Memo';
 import Navigtion from './component/Navigation';
-
+import Footer from './component/Footer';
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
           <Route exact path="/" element={<Home/>}/>
           <Route path="/memo" element={<Memo />} />
         </Routes>
+        <Footer></Footer>
       </BrowserRouter>
     </div>
   );

@@ -1,6 +1,7 @@
 .top_nav_area {
     width: 100%;
     position: absolute;
+    z-index: 100;
 }
 
 .top_nav_header {

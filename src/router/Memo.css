@@ -2,9 +2,22 @@
     padding : 100px 20px 20px 20px;
     height: 100vh;
     background-color: #23272a;
+    position: relative;
 }
 
 .box{
+    position: absolute;
     resize: both;
     overflow: auto;
+    min-width: 100px;
+    min-height: 100px;
+    box-shadow: 1px 1px 3px 1px #bab79f;
+}
+
+.memoOverlay {
+    position: absolute;
+    top: 120px;
+    right: 20px;
+
+
 }

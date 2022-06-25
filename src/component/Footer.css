@@ -1,0 +1,24 @@
+.footerBox {
+    min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.footer_rogoBox {
+    min-width: 15%;
+}
+
+.footer_contact {
+    min-width: 20%;
+}
+
+.footer_contact .linkArea { 
+    display: flex;
+}
+
+.footer_contact .linkArea .item {
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+}
